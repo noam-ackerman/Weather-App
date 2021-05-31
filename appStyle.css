@@ -1,0 +1,167 @@
+.group {
+  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/008/847/original/pexels-elia-clerici-912110.jpg?1620829930)
+    center fixed;
+  display: block;
+  margin: 40px auto;
+  border: 3.5px solid #e6808a;
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 15px rgb(0, 0, 0, 0.15);
+}
+
+.row.searchBar {
+  text-align: center;
+  margin-top: 50px;
+  padding: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.row.topRow {
+  padding: 0px 43px;
+  margin-right: 1px;
+}
+.searchButton {
+  background: #ea64ae;
+  border: 3px solid rebeccapurple;
+  border-radius: 5px;
+  padding: 7px 10px;
+  color: #4a6c6e;
+  box-shadow: 5px 5px 10px rgba(36, 16, 16, 0.2);
+  margin-left: 14.2px;
+  margin-right: 0;
+  transition: all 200ms ease-in-out;
+}
+.searchButton:hover {
+  background: #ef77b7;
+}
+
+.currentButton {
+  background: #e6808a;
+  border: 3px solid rebeccapurple;
+  border-radius: 5px;
+  padding: 7px 10px;
+  color: #4a6c6e;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+  margin-left: 3px;
+  margin-top: 50px;
+  transition: all 200ms ease-in-out;
+}
+.currentButton:hover {
+  background: #e09497;
+}
+
+.city {
+  color: #4a6c6e;
+  background: #ea64ae;
+  border: 3px solid rebeccapurple;
+  border-radius: 5px;
+  padding: 7px 3.5px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  color: #f28c94;
+  margin-bottom: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.date {
+  text-align: center;
+  color: #e81224;
+  padding-top: 2px;
+  font-size: 18px;
+  font-weight: 600;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  color: #585b5d;
+}
+a:hover {
+  color: #ea64ae;
+}
+.celsius {
+  font-size: 20px;
+}
+.fahrenheit {
+  font-size: 21px;
+}
+.slash {
+  color: #585b5d;
+}
+.degreesSection {
+  text-align: center;
+}
+
+.currentDegreesC,
+.currentDegreesF {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: rebeccapurple;
+  padding-left: 5px;
+}
+.mainEmoji {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: #585b5d;
+  padding-left: 5px;
+}
+
+.note {
+  color: #585b5d;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+.extraDetails {
+  color: #585b5d;
+  font-size: 13.3px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #e81224;
+  font-weight: 600;
+  text-align: center;
+}
+h3 {
+  font-size: 15px;
+  color: #585b5d;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 14px;
+}
+
+.future {
+  position: relative;
+  left: 28px;
+  bottom: 40px;
+  margin-top: 10px;
+}
+
+.col-2.thursday {
+  padding-left: 16px;
+}
+
+.col-2.friday {
+  padding-left: 30px;
+}
+
+.col-2.saturday {
+  padding-left: 18px;
+}
+
+.col-2.sunday {
+  padding-left: 27px;
+}
+.col-2.monday {
+  padding-left: 23px;
+}
