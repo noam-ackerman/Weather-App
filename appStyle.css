@@ -3,6 +3,7 @@
     center fixed;
   display: block;
   margin: 40px auto;
+  margin-bottom: 16px;
   border: 3.5px solid #e6808a;
   max-width: 480px;
   border-radius: 10px;
@@ -164,4 +165,18 @@ h3 {
 }
 .col-2.monday {
   padding-left: 23px;
+}
+
+p {
+  text-align: center;
+  font-size: 12px;
+}
+
+.codeLink {
+  color: #ea64ae;
+  margin-top: 0;
+}
+
+.codeLink:hover {
+  text-decoration: underline;
 }
