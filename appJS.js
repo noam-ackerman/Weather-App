@@ -26,8 +26,8 @@ function getCurrentPosition(position) {
   axios.get(apiUrl).then(function showCurrentCityWeather(response) {
     let currentCity = response.data.name;
     cityTitle.innerHTML = currentCity.toUpperCase();
-    let currentTemp = Math.round(response.data.main.temp);
-    currentTempC.innerHTML = currentTemp;
+    let currentLocationTemp = Math.round(response.data.main.temp);
+    unitC.innerHTML = currentLocationTemp;
     celsiusLink.innerHTML = `℃ `;
     fahrenheitLink.innerHTML = `℉`;
     slash.innerHTML = `/`;
@@ -41,17 +41,17 @@ function getCurrentPosition(position) {
       "click",
       function changeToCurrentFahrenheit(event) {
         event.preventDefault();
-        let fahrenheit = Math.round((currentTemp * 9) / 5 + 32);
-        currentTempF.innerHTML = `${fahrenheit}`;
-        currentTempC.innerHTML = ``;
+        let fahrenheit = Math.round((currentLocationTemp * 9) / 5 + 32);
+        unitF.innerHTML = `${fahrenheit}`;
+        unitC.innerHTML = ``;
       }
     );
     celsiusLink.addEventListener(
       "click",
       function changeToCurrentCelsius(event) {
         event.preventDefault();
-        currentTempC.innerHTML = currentTemp;
-        currentTempF.innerHTML = ``;
+        unitC.innerHTML = currentTemp;
+        unitF.innerHTML = ``;
       }
     );
   });
@@ -69,7 +69,7 @@ currentButton.addEventListener("click", currentLocationWeather);
 
 function displayWeather(response) {
   let temp = Math.round(response.data.main.temp);
-  currentTempC.innerHTML = temp;
+  unitC.innerHTML = temp;
   celsiusLink.innerHTML = `℃ `;
   fahrenheitLink.innerHTML = `℉`;
   slash.innerHTML = `/`;
@@ -82,13 +82,13 @@ function displayWeather(response) {
   fahrenheitLink.addEventListener("click", function changeToFahrenheit(event) {
     event.preventDefault();
     let fahrenheit = Math.round((temp * 9) / 5 + 32);
-    currentTempF.innerHTML = `${fahrenheit}`;
-    currentTempC.innerHTML = ``;
+    unitF.innerHTML = `${fahrenheit}`;
+    unitC.innerHTML = ``;
   });
   celsiusLink.addEventListener("click", function changeToCelsius(event) {
     event.preventDefault();
-    currentTempC.innerHTML = temp;
-    currentTempF.innerHTML = ``;
+    unitC.innerHTML = temp;
+    unitF.innerHTML = ``;
   });
 }
 
@@ -113,5 +113,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 let extraDetails = document.querySelector("#extra-details");
 let cityTitle = document.querySelector("#city-title");
 let weatherNote = document.querySelector("#note");
-let currentTempC = document.querySelector("#current-degrees-c");
-let currentTempF = document.querySelector("#current-degrees-f");
+let unitC = document.querySelector("#unit-c");
+let unitF = document.querySelector("#unit-f");
