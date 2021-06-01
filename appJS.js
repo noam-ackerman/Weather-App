@@ -36,7 +36,7 @@ function getCurrentPosition(position) {
     )}`;
     let windSpeed = Math.round(response.data.wind.speed);
     let humidity = Math.round(response.data.main.humidity);
-    extraDetails.innerHTML = `Humidity: ${humidity}% • Wind: ${windSpeed} km/h`;
+    extraDetails.innerHTML = `Humidity: ${humidity}% <strong>•</strong> Wind: ${windSpeed} km/h`;
     fahrenheitLink.addEventListener(
       "click",
       function changeToCurrentFahrenheit(event) {
@@ -78,7 +78,7 @@ function displayWeather(response) {
   )}`;
   let windSpeed = Math.round(response.data.wind.speed);
   let humidity = Math.round(response.data.main.humidity);
-  extraDetails.innerHTML = `Humidity: ${humidity}% • Wind: ${windSpeed} km/h`;
+  extraDetails.innerHTML = `Humidity: ${humidity}% <strong>•</strong> Wind: ${windSpeed} km/h`;
   fahrenheitLink.addEventListener("click", function changeToFahrenheit(event) {
     event.preventDefault();
     let fahrenheit = Math.round((temp * 9) / 5 + 32);

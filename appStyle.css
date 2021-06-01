@@ -20,17 +20,19 @@
 .row.topRow {
   padding: 0px 43px;
   margin-right: 1px;
+  font-family: "Montserrat", sans-serif;
 }
 .searchButton {
   background: #ea64ae;
   border: 3px solid rebeccapurple;
   border-radius: 5px;
-  padding: 7px 10px;
+  padding: 7px 7px;
   color: #4a6c6e;
   box-shadow: 5px 5px 10px rgba(36, 16, 16, 0.2);
-  margin-left: 14.2px;
+  margin-left: 11.1px;
   margin-right: 0;
   transition: all 200ms ease-in-out;
+  font-weight: 500;
 }
 .searchButton:hover {
   background: #ef77b7;
@@ -58,6 +60,7 @@
   border-radius: 5px;
   padding: 7px 3.5px;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+  font-weight: 500;
 }
 
 h1 {
@@ -66,7 +69,8 @@ h1 {
   font-weight: 700;
   color: #f28c94;
   margin-bottom: 5px;
-  font-family: Arial, sans-serif;
+  margin-top: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .date {
@@ -74,7 +78,8 @@ h1 {
   color: #e81224;
   padding-top: 2px;
   font-size: 18px;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
 }
 a {
   text-align: center;
@@ -99,11 +104,12 @@ a:hover {
 
 .currentDegreesC,
 .currentDegreesF {
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
   color: rebeccapurple;
   padding-left: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .note {
@@ -112,25 +118,28 @@ a:hover {
   text-align: center;
   font-weight: bold;
   margin-left: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 .extraDetails {
   color: #585b5d;
   font-size: 13.3px;
-  font-weight: 600;
   text-align: center;
   margin-top: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 16px;
   color: #e81224;
-  font-weight: 600;
+  font-weight: 550;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 h3 {
-  font-size: 15px;
+  font-size: 14px;
   color: #585b5d;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   margin-left: 14px;
 }
@@ -163,7 +172,9 @@ h3 {
 
 p {
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
 }
 
 .codeLink {
