@@ -27,7 +27,7 @@ function getCurrentPosition(position) {
     let currentCity = response.data.name;
     cityTitle.innerHTML = currentCity.toUpperCase();
     let currentLocationTemp = Math.round(response.data.main.temp);
-    unitC.innerHTML = currentLocationTemp;
+    degreesC.innerHTML = currentLocationTemp;
     celsiusLink.innerHTML = `℃ `;
     fahrenheitLink.innerHTML = `℉`;
     slash.innerHTML = `/`;
@@ -42,16 +42,16 @@ function getCurrentPosition(position) {
       function changeToCurrentFahrenheit(event) {
         event.preventDefault();
         let fahrenheit = Math.round((currentLocationTemp * 9) / 5 + 32);
-        unitF.innerHTML = `${fahrenheit}`;
-        unitC.innerHTML = ``;
+        degreesF.innerHTML = `${fahrenheit}`;
+        degreesC.innerHTML = ``;
       }
     );
     celsiusLink.addEventListener(
       "click",
       function changeToCurrentCelsius(event) {
         event.preventDefault();
-        unitC.innerHTML = currentTemp;
-        unitF.innerHTML = ``;
+        degreesC.innerHTML = currentTemp;
+        degreesF.innerHTML = ``;
       }
     );
   });
@@ -69,7 +69,7 @@ currentButton.addEventListener("click", currentLocationWeather);
 
 function displayWeather(response) {
   let temp = Math.round(response.data.main.temp);
-  unitC.innerHTML = temp;
+  degreesC.innerHTML = temp;
   celsiusLink.innerHTML = `℃ `;
   fahrenheitLink.innerHTML = `℉`;
   slash.innerHTML = `/`;
@@ -82,13 +82,13 @@ function displayWeather(response) {
   fahrenheitLink.addEventListener("click", function changeToFahrenheit(event) {
     event.preventDefault();
     let fahrenheit = Math.round((temp * 9) / 5 + 32);
-    unitF.innerHTML = `${fahrenheit}`;
-    unitC.innerHTML = ``;
+    degreesF.innerHTML = `${fahrenheit}`;
+    degreesC.innerHTML = ``;
   });
   celsiusLink.addEventListener("click", function changeToCelsius(event) {
     event.preventDefault();
-    unitC.innerHTML = temp;
-    unitF.innerHTML = ``;
+    degreesC.innerHTML = temp;
+    degreesF.innerHTML = ``;
   });
 }
 
@@ -113,5 +113,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 let extraDetails = document.querySelector("#extra-details");
 let cityTitle = document.querySelector("#city-title");
 let weatherNote = document.querySelector("#note");
-let unitC = document.querySelector("#unit-c");
-let unitF = document.querySelector("#unit-f");
+let degreesC = document.querySelector("#degrees-c");
+let degreesF = document.querySelector("#degrees-f");
