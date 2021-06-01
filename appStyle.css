@@ -81,23 +81,30 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 550;
 }
+
 a {
   text-align: center;
   text-decoration: none;
   color: #585b5d;
 }
+
 a:hover {
   color: #ea64ae;
 }
+
 .celsius {
   font-size: 20px;
 }
+
 .fahrenheit {
   font-size: 21px;
 }
+
 .slash {
   color: #585b5d;
+  font-size: 20px;
 }
+
 .degreesSection {
   text-align: center;
 }
@@ -130,9 +137,9 @@ a:hover {
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #e81224;
-  font-weight: 550;
+  font-weight: 600;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
