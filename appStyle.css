@@ -126,6 +126,7 @@ a:hover {
   font-weight: bold;
   margin-left: 5px;
   font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
 }
 .extraDetails {
   color: #585b5d;

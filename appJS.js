@@ -45,16 +45,14 @@ function getCurrentPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(function showCurrentCityWeather(response) {
     // currentDate.innerHTML = formatDate(response.data.dt * 1000);
-    let currentCity = response.data.name;
+    let currentCity = response.data.name.toUpperCase();
     cityTitle.innerHTML = currentCity.toUpperCase();
     let currentLocationTemp = Math.round(response.data.main.temp);
     degreesC.innerHTML = currentLocationTemp;
     celsiusLink.innerHTML = `℃ `;
     fahrenheitLink.innerHTML = `℉`;
     slash.innerHTML = `/`;
-    weatherNote.innerHTML = `${response.data.weather[0].description[0].toUpperCase()}${response.data.weather[0].description.slice(
-      1
-    )}`;
+    weatherNote.innerHTML = response.data.weather[0].description;
     let windSpeed = Math.round(response.data.wind.speed);
     let humidity = Math.round(response.data.main.humidity);
     extraDetails.innerHTML = `Humidity: ${humidity}% <strong>•</strong> Wind: ${windSpeed} km/h`;
@@ -90,15 +88,13 @@ currentButton.addEventListener("click", currentLocationWeather);
 
 function displayWeather(response) {
   // currentDate.innerHTML = formatDate(response.data.dt * 1000);
-  cityTitle.innerHTML = response.data.name;
+  cityTitle.innerHTML = response.data.name.toUpperCase();
   let temp = Math.round(response.data.main.temp);
   degreesC.innerHTML = temp;
   celsiusLink.innerHTML = `℃ `;
   fahrenheitLink.innerHTML = `℉`;
   slash.innerHTML = `/`;
-  weatherNote.innerHTML = `${response.data.weather[0].description[0].toUpperCase()}${response.data.weather[0].description.slice(
-    1
-  )}`;
+  weatherNote.innerHTML = response.data.weather[0].description;
   let windSpeed = Math.round(response.data.wind.speed);
   let humidity = Math.round(response.data.main.humidity);
   extraDetails.innerHTML = `Humidity: ${humidity}% <strong>•</strong> Wind: ${windSpeed} km/h`;
