@@ -49,8 +49,8 @@ function getCurrentPosition(position) {
     cityTitle.innerHTML = currentCity.toUpperCase();
     let currentLocationTemp = Math.round(response.data.main.temp);
     degreesC.innerHTML = currentLocationTemp;
-    celsiusLink.innerHTML = `℃ `;
-    fahrenheitLink.innerHTML = `℉`;
+    celsiusLink.innerHTML = `°C`;
+    fahrenheitLink.innerHTML = `°F`;
     slash.innerHTML = `/`;
     weatherNote.innerHTML = response.data.weather[0].description;
     let windSpeed = Math.round(response.data.wind.speed);
@@ -91,8 +91,8 @@ function displayWeather(response) {
   cityTitle.innerHTML = response.data.name.toUpperCase();
   let temp = Math.round(response.data.main.temp);
   degreesC.innerHTML = temp;
-  celsiusLink.innerHTML = `℃ `;
-  fahrenheitLink.innerHTML = `℉`;
+  celsiusLink.innerHTML = `°C`;
+  fahrenheitLink.innerHTML = `°F`;
   slash.innerHTML = `/`;
   weatherNote.innerHTML = response.data.weather[0].description;
   let windSpeed = Math.round(response.data.wind.speed);
