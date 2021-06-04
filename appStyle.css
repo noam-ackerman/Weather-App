@@ -4,7 +4,7 @@
   display: block;
   margin: 40px auto;
   margin-bottom: 16px;
-  border: 3.5px solid #ec6e4c;
+  border: 3.5px solid #e6808a;
   max-width: 480px;
   border-radius: 10px;
   box-shadow: 7px 7px 15px rgb(0, 0, 0, 0.15);
@@ -63,6 +63,12 @@
   font-weight: 500;
 }
 
+.growingHeart {
+  padding: 1px 4px 0px 4px;
+  position: relative;
+  bottom: 3px;
+}
+
 h1 {
   text-align: center;
   font-size: 32px;
@@ -79,6 +85,7 @@ h1 {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 550;
+  margin-top: 0;
 }
 
 a {
@@ -111,13 +118,14 @@ a:hover {
 
 .weatherSection {
   position: relative;
-  top: -35px;
+  top: -34px;
 }
 
 .degreesSection {
   text-align: center;
   position: relative;
   left: -5px;
+  top: 3px;
 }
 
 .degreesC,
@@ -133,7 +141,7 @@ a:hover {
   display: block;
   margin: 0 auto;
   position: relative;
-  top: -8px;
+  top: -3px;
 }
 
 .note {
