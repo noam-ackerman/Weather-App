@@ -1,4 +1,4 @@
-//current Hour + day defult display
+//current Hour + day in user's location defult display
 let now = new Date();
 let hours = ("0" + now.getHours()).slice(-2);
 let minutes = ("0" + now.getMinutes()).slice(-2);
@@ -16,7 +16,7 @@ let day = days[now.getDay()];
 let currentDate = document.querySelector("#date");
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
-//current day + hour of city after  search
+//latest city data update day and time based on user location
 
 function formatDate(timestamp) {
   let now = new Date(timestamp);
@@ -33,7 +33,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[now.getDay()];
-  return `Recent data update: ${day} ${hours}:${minutes}`;
+  return `Latest data update: ${day} ${hours}:${minutes}`;
 }
 
 //show current location and current weather in location from button
@@ -44,9 +44,14 @@ function getCurrentPosition(position) {
   let apiKey = "b5a3097ed58959eb47ee948058cf6636";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(function showCurrentCityWeather(response) {
-    currentDate.innerHTML = formatDate(response.data.dt * 1000);
     let currentCity = response.data.name.toUpperCase();
     cityTitle.innerHTML = currentCity.toUpperCase();
+    currentDate.innerHTML = formatDate(response.data.dt * 1000);
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
     let currentLocationTemp = Math.round(response.data.main.temp);
     degreesC.innerHTML = currentLocationTemp;
     celsiusLink.innerHTML = `°C`;
@@ -87,13 +92,19 @@ currentButton.addEventListener("click", currentLocationWeather);
 //CitySearch +display city and current live weather in city
 
 function displayWeather(response) {
-  currentDate.innerHTML = formatDate(response.data.dt * 1000);
   cityTitle.innerHTML = response.data.name.toUpperCase();
+  currentDate.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   let temp = Math.round(response.data.main.temp);
   degreesC.innerHTML = temp;
   celsiusLink.innerHTML = `°C`;
   fahrenheitLink.innerHTML = `°F`;
   slash.innerHTML = `/`;
+
   weatherNote.innerHTML = response.data.weather[0].description;
   let windSpeed = Math.round(response.data.wind.speed);
   let humidity = Math.round(response.data.main.humidity);

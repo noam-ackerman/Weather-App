@@ -4,7 +4,7 @@
   display: block;
   margin: 40px auto;
   margin-bottom: 16px;
-  border: 3.5px solid #e6808a;
+  border: 3.5px solid #ec6e4c;
   max-width: 480px;
   border-radius: 10px;
   box-shadow: 7px 7px 15px rgb(0, 0, 0, 0.15);
@@ -109,10 +109,15 @@ a:hover {
   left: 1.5px;
 }
 
+.weatherSection {
+  position: relative;
+  top: -35px;
+}
+
 .degreesSection {
   text-align: center;
   position: relative;
-  top: 1px;
+  left: -5px;
 }
 
 .degreesC,
@@ -124,12 +129,18 @@ a:hover {
   padding-left: 5px;
 }
 
+.icon {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -8px;
+}
+
 .note {
   color: #585b5d;
   font-size: 16px;
   text-align: center;
   font-weight: bold;
-  margin-left: 5px;
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
 }
