@@ -4,7 +4,7 @@
   display: block;
   margin: 40px auto;
   margin-bottom: 16px;
-  border: 3.5px solid #e6808a;
+  border: 3px solid #e7818b;
   max-width: 480px;
   border-radius: 10px;
   box-shadow: 7px 7px 15px rgb(0, 0, 0, 0.15);
@@ -45,7 +45,7 @@
   padding: 7px 10px;
   color: #4a6c6e;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
-  margin-left: 3px;
+  margin-left: 2.5px;
   margin-top: 50px;
   transition: all 200ms ease-in-out;
 }
