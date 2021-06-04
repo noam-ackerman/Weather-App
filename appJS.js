@@ -33,7 +33,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[now.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `Recent data update: ${day} ${hours}:${minutes}`;
 }
 
 //show current location and current weather in location from button
@@ -44,7 +44,7 @@ function getCurrentPosition(position) {
   let apiKey = "b5a3097ed58959eb47ee948058cf6636";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(function showCurrentCityWeather(response) {
-    // currentDate.innerHTML = formatDate(response.data.dt * 1000);
+    currentDate.innerHTML = formatDate(response.data.dt * 1000);
     let currentCity = response.data.name.toUpperCase();
     cityTitle.innerHTML = currentCity.toUpperCase();
     let currentLocationTemp = Math.round(response.data.main.temp);
@@ -87,7 +87,7 @@ currentButton.addEventListener("click", currentLocationWeather);
 //CitySearch +display city and current live weather in city
 
 function displayWeather(response) {
-  // currentDate.innerHTML = formatDate(response.data.dt * 1000);
+  currentDate.innerHTML = formatDate(response.data.dt * 1000);
   cityTitle.innerHTML = response.data.name.toUpperCase();
   let temp = Math.round(response.data.main.temp);
   degreesC.innerHTML = temp;
