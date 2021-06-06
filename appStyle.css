@@ -120,7 +120,7 @@ a:hover {
 }
 
 .slash {
-  color: #585b5d;
+  color: #636466;
   font-size: 26px;
   position: relative;
   bottom: 3px;
@@ -149,7 +149,7 @@ a:hover {
 }
 
 .note {
-  color: #585b5d;
+  color: #636466;
   font-size: 16px;
   text-align: center;
   font-weight: bold;
@@ -157,12 +157,12 @@ a:hover {
   text-transform: capitalize;
 }
 .extraDetails {
-  color: #585b5d;
+  color: #636466;
   font-size: 13.3px;
   text-align: center;
   margin-top: 4px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 550;
 }
 
 h2 {
@@ -174,7 +174,7 @@ h2 {
 }
 h3 {
   font-size: 14px;
-  color: #585b5d;
+  color: #636466;
   font-weight: 600;
   text-align: center;
   margin-left: 14px;
