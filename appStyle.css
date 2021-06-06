@@ -51,7 +51,7 @@
 }
 
 .currentButton {
-  background: #e6808a;
+  background: #f28c94;
   border: 3px solid rebeccapurple;
   border-radius: 5px;
   padding: 7px 10px;
@@ -62,7 +62,7 @@
   transition: all 200ms ease-in-out;
 }
 .currentButton:hover {
-  background: #ff8b92;
+  background: #fc9c9f;
 }
 
 h1 {
@@ -76,6 +76,7 @@ h1 {
 }
 
 .growingHeart {
+  filter: brightness(105%);
   padding: 1px 4px 0px 4px;
   position: relative;
   bottom: 3px;
@@ -91,7 +92,7 @@ h1 {
 }
 
 .icon {
-  filter: hue-rotate(-16deg) brightness(134%);
+  filter: hue-rotate(-16deg) brightness(138%);
   display: block;
   margin: 0 auto;
   position: relative;
