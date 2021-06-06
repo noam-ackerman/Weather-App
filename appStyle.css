@@ -10,6 +10,12 @@
   box-shadow: 7px 7px 15px rgb(0, 0, 0, 0.15);
 }
 
+.row.topRow {
+  padding: 0px 43px;
+  margin-right: 1px;
+  font-family: "Montserrat", sans-serif;
+}
+
 .row.searchBar {
   text-align: center;
   margin-top: 50px;
@@ -17,11 +23,17 @@
   margin-left: 0px;
   margin-right: 0px;
 }
-.row.topRow {
-  padding: 0px 43px;
-  margin-right: 1px;
-  font-family: "Montserrat", sans-serif;
+
+.city {
+  color: #4a6c6e;
+  background: #ea64ae;
+  border: 3px solid rebeccapurple;
+  border-radius: 5px;
+  padding: 7px 3.5px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+  font-weight: 500;
 }
+
 .searchButton {
   background: #ea64ae;
   border: 3px solid rebeccapurple;
@@ -35,7 +47,7 @@
   font-weight: 500;
 }
 .searchButton:hover {
-  background: #ef77b7;
+  background: #f274b9;
 }
 
 .currentButton {
@@ -50,23 +62,7 @@
   transition: all 200ms ease-in-out;
 }
 .currentButton:hover {
-  background: #e09497;
-}
-
-.city {
-  color: #4a6c6e;
-  background: #ea64ae;
-  border: 3px solid rebeccapurple;
-  border-radius: 5px;
-  padding: 7px 3.5px;
-  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
-  font-weight: 500;
-}
-
-.growingHeart {
-  padding: 1px 4px 0px 4px;
-  position: relative;
-  bottom: 3px;
+  background: #ff8b92;
 }
 
 h1 {
@@ -79,6 +75,12 @@ h1 {
   font-family: "Montserrat", sans-serif;
 }
 
+.growingHeart {
+  padding: 1px 4px 0px 4px;
+  position: relative;
+  bottom: 3px;
+}
+
 .date {
   text-align: center;
   color: #e81224;
@@ -86,6 +88,14 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 550;
   margin-top: 0;
+}
+
+.icon {
+  filter: hue-rotate(-16deg) brightness(134%);
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -3px;
 }
 
 a {
@@ -125,7 +135,7 @@ a:hover {
   text-align: center;
   position: relative;
   left: -5px;
-  top: 3px;
+  top: 4px;
 }
 
 .degreesC,
@@ -135,13 +145,6 @@ a:hover {
   text-align: center;
   color: rebeccapurple;
   padding-left: 5px;
-}
-
-.icon {
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  top: -3px;
 }
 
 .note {
@@ -176,7 +179,7 @@ h3 {
   margin-left: 14px;
 }
 
-.future {
+.forecast {
   position: relative;
   left: 28px;
   bottom: 30px;
