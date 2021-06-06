@@ -59,8 +59,8 @@ function displayForecast(response) {
               forecastDay.dt
             )}</div></h2>
             <h3>
-              <div class="maxTempForecast" id="max-temp-forecast">${tempMax}°</div>
-              <div class="minTempForecast" id="min-temp-forcast">${tempMin}°</div>
+              <div class="maxTempForecast" id="max-temp-forecast">${tempMax}℃</div>
+              <div class="minTempForecast" id="min-temp-forecast">${tempMin}℃</div>
             </h3>
             <img src="http://openweathermap.org/img/wn/${
               forecastDay.weather[0].icon
