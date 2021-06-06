@@ -1,3 +1,6 @@
+body {
+  position: static;
+}
 .group {
   background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/008/847/original/pexels-elia-clerici-912110.jpg?1620829930)
     center fixed;
@@ -165,45 +168,36 @@ a:hover {
   font-weight: 550;
 }
 
+.forecast {
+  text-align: center;
+  padding: 20px 40px;
+  margin-bottom: 15px;
+}
+
 h2 {
   font-size: 14px;
   color: #e81224;
   font-weight: 600;
-  text-align: center;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 5px;
 }
 h3 {
-  font-size: 14px;
+  font-size: 13px;
   color: #636466;
-  font-weight: 600;
-  text-align: center;
-  margin-left: 14px;
+  font-weight: normal;
+  margin-bottom: 3px;
 }
 
-.forecast {
+.dayTempForecast {
+  font-weight: 800;
+}
+
+img.forecastIcon {
+  display: block;
+  margin: 0 auto;
+  filter: hue-rotate(-16deg) brightness(138%);
   position: relative;
-  left: 28px;
-  bottom: 30px;
-  padding: 13px;
-}
-
-.col-2.thursday {
-  padding-left: 16px;
-}
-
-.col-2.friday {
-  padding-left: 30px;
-}
-
-.col-2.saturday {
-  padding-left: 18px;
-}
-
-.col-2.sunday {
-  padding-left: 27px;
-}
-.col-2.monday {
-  padding-left: 23px;
+  top: -7px;
 }
 
 p {

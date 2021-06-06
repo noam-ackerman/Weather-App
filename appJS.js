@@ -36,6 +36,33 @@ function formatDate(timestamp) {
   return `Latest data update: ${day} ${hours}:${minutes}`;
 }
 
+//forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+            <h2><span class="forecastDay" id="forecast-day">${day}</span></h2>
+            <h3>
+              <span class="dayTempForecast" id="day-temp-forecast">13℃</span
+              ><span class="nightTempForecast" id="night-temp-forcast"></span>
+                12℃</span
+              >
+            </h3>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" class="forecastIcon" id="forecast-icon" width="40px"/>
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 //show current location and current weather in location from button
 
 function getCurrentPosition(position) {
