@@ -51,7 +51,7 @@ function displayForecast(response) {
   forecast.forEach(function (forecastDay, index) {
     let tempMax = Math.round(forecastDay.temp.max);
     let tempMin = Math.round(forecastDay.temp.min);
-    if (index < 7 && index > 0) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `<div class="col-2">
