@@ -82,6 +82,15 @@ h1 {
   bottom: 3px;
 }
 
+.noteDate {
+  text-align: center;
+  color: #e81224;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  margin-top: 0;
+}
+
 .date {
   text-align: center;
   color: #e81224;

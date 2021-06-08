@@ -2,13 +2,12 @@
 let now = new Date();
 let hours = ("0" + now.getHours()).slice(-2);
 let minutes = ("0" + now.getMinutes()).slice(-2);
-
 let days = [
   "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
-  "Thursady",
+  "Thursday",
   "Friday",
   "Saturday",
 ];
@@ -18,22 +17,35 @@ currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 //latest city data update day and time based on user location
 
-function formatDate(timestamp) {
-  let now = new Date(timestamp);
-  let hours = ("0" + now.getHours()).slice(-2);
-  let minutes = ("0" + now.getMinutes()).slice(-2);
+function formatLocalTime(props) {
+  let localTime = new Date(props.dt * 1000);
+  let localTimeOffset = localTime.getTimezoneOffset() * 60;
+  localTime.setSeconds(
+    localTime.getSeconds() + localTimeOffset + props.timezone
+  );
+  let localHours = ("0" + localTime.getHours()).slice(-2);
+  let localMinutes = ("0" + localTime.getMinutes()).slice(-2);
 
+  return `${localHours}:${localMinutes}`;
+}
+
+function formatLocalDate(props) {
+  let localTime = new Date(props.dt * 1000);
+  let localTimeOffset = localTime.getTimezoneOffset() * 60;
+  localTime.setSeconds(
+    localTime.getSeconds() + localTimeOffset + props.timezone
+  );
   let days = [
     "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thursady",
+    "Thursday",
     "Friday",
     "Saturday",
   ];
-  let day = days[now.getDay()];
-  return `Latest data update: ${day} ${hours}:${minutes}`;
+  let localDay = days[localTime.getDay()];
+  return `${localDay} ${formatLocalTime(props)} `;
 }
 
 //display forecast
@@ -90,8 +102,11 @@ function getCurrentPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(function showCurrentCityWeather(response) {
     let currentCity = response.data.name.toUpperCase();
+    let noteDate = document.querySelector("#note-date");
+    let currentDate = document.querySelector("#date");
+    noteDate.innerHTML = "Latest data update in local timezone:";
+    currentDate.innerHTML = formatLocalDate(response.data);
     cityTitle.innerHTML = currentCity.toUpperCase();
-    currentDate.innerHTML = formatDate(response.data.dt * 1000);
     iconElement.setAttribute(
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -145,7 +160,6 @@ function getCoords(coordinates) {
 
 function displayWeather(response) {
   cityTitle.innerHTML = response.data.name.toUpperCase();
-  currentDate.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -156,7 +170,10 @@ function displayWeather(response) {
   celsiusLink.innerHTML = `°C`;
   fahrenheitLink.innerHTML = `°F`;
   slash.innerHTML = `/`;
-
+  let noteDate = document.querySelector("#note-date");
+  let currentDate = document.querySelector("#date");
+  noteDate.innerHTML = "Latest data update in local timezone:";
+  currentDate.innerHTML = formatLocalDate(response.data);
   weatherNote.innerHTML = response.data.weather[0].description;
   let windSpeed = Math.round(response.data.wind.speed);
   let humidity = Math.round(response.data.main.humidity);
