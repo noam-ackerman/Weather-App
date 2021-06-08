@@ -135,7 +135,13 @@ function changeToCelsius(event) {
   fahrenheitLink.addEventListener("click", changeToFahrenheit);
 }
 
-//dispaly weather + city
+//dispaly weather + city + getting coords for forecast
+function getCoords(coordinates) {
+  let apiKey = "b5a3097ed58959eb47ee948058cf6636";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
   cityTitle.innerHTML = response.data.name.toUpperCase();
   iconElement.setAttribute(
@@ -160,19 +166,12 @@ function displayWeather(response) {
 }
 
 //get current location and current weather in location from button
-function getCurrentLocationForcast(coordinates) {
-  let apiKey = "b5a3097ed58959eb47ee948058cf6636";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
-}
-
 function getCurrentPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "b5a3097ed58959eb47ee948058cf6636";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
-  getCurrentLocationForcast(position.coords);
 }
 
 function currentLocationWeather(event) {
@@ -187,12 +186,6 @@ let currentButton = document.querySelector("button");
 currentButton.addEventListener("click", currentLocationWeather);
 
 //City Search engine
-function getCoords(coordinates) {
-  let apiKey = "b5a3097ed58959eb47ee948058cf6636";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
-}
-
 function search(city) {
   let apiKey = "b5a3097ed58959eb47ee948058cf6636";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
