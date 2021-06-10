@@ -25,7 +25,7 @@
 }
 
 .city {
-  color: #4a6c6e;
+  color: #636466;
   background: #ea64ae;
   border: 3px solid rebeccapurple;
   border-radius: 5px;
@@ -39,7 +39,7 @@
   border: 3px solid rebeccapurple;
   border-radius: 5px;
   padding: 7px 7px;
-  color: #4a6c6e;
+  color: #636466;
   box-shadow: 5px 5px 10px rgba(36, 16, 16, 0.2);
   margin-left: 11.1px;
   margin-right: 0;
@@ -55,7 +55,6 @@
   border: 3px solid rebeccapurple;
   border-radius: 5px;
   padding: 7px 10px;
-  color: #4a6c6e;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
   margin-left: 2.5px;
   margin-top: 50px;
@@ -73,6 +72,11 @@ h1 {
   margin-bottom: 4px;
   margin-top: 25px;
   font-family: "Montserrat", sans-serif;
+}
+
+.cityTitle {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #e81224;
 }
 
 .growingHeart {
