@@ -21,7 +21,6 @@
 }
 
 .typeSubmit {
-  margin: 0 auto;
   margin: 0;
   padding: 0px;
   text-align: left;
@@ -47,14 +46,10 @@
   max-width: 100%;
 }
 
-.search {
-  margin: 0px;
-  padding: 0px;
-}
-
+.search,
 .submitSearch {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .searchButton {
@@ -76,7 +71,7 @@
 
 .location {
   margin: 0;
-  padding: 0px;
+  padding: 0;
   text-align: right;
 }
 
