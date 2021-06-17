@@ -11,17 +11,28 @@
 }
 
 .row.topRow {
-  padding: 0px 43px;
-  margin-right: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
   font-family: "Montserrat", sans-serif;
+  max-width: 100%;
+  margin: 0;
+}
+
+.typeSubmit {
+  margin: 0 auto;
+  margin: 0;
+  padding: 0px;
+  text-align: left;
 }
 
 .row.searchBar {
-  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
   margin-top: 50px;
   padding: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .city {
@@ -32,6 +43,18 @@
   padding: 7px 3.5px;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
   font-weight: 500;
+  margin: 0;
+  max-width: 100%;
+}
+
+.search {
+  margin: 0px;
+  padding: 0px;
+}
+
+.submitSearch {
+  margin: 0px;
+  padding: 0px;
 }
 
 .searchButton {
@@ -41,23 +64,32 @@
   padding: 7px 7px;
   color: #636466;
   box-shadow: 5px 5px 10px rgba(36, 16, 16, 0.2);
-  margin-left: 11.1px;
-  margin-right: 0;
   transition: all 200ms ease-in-out;
   font-weight: 500;
+  margin: 0;
+  position: relative;
+  right: 4.2px;
 }
 .searchButton:hover {
   background: #f274b9;
 }
 
+.location {
+  margin: 0;
+  padding: 0px;
+  text-align: right;
+}
+
 .currentButton {
+  margin: 0;
   background: #ee858f;
   border: 3px solid rebeccapurple;
   border-radius: 5px;
   padding: 7px 10px;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
-  margin-left: 2.5px;
   margin-top: 50px;
+  position: relative;
+  right: 8px;
   transition: all 200ms ease-in-out;
 }
 .currentButton:hover {
@@ -180,7 +212,7 @@ a:hover {
 
 .forecast {
   text-align: center;
-  padding: 20px 55px;
+  padding: 20px 48px;
   margin-bottom: 15px;
 }
 
