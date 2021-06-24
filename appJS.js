@@ -24,16 +24,6 @@ function formatLocalTime(props) {
   );
   let localHours = ("0" + localTime.getHours()).slice(-2);
   let localMinutes = ("0" + localTime.getMinutes()).slice(-2);
-
-  return `${localHours}:${localMinutes}`;
-}
-
-function formatLocalDate(props) {
-  let localTime = new Date(props.dt * 1000);
-  let localTimeOffset = localTime.getTimezoneOffset() * 60;
-  localTime.setSeconds(
-    localTime.getSeconds() + localTimeOffset + props.timezone
-  );
   let days = [
     "Sunday",
     "Monday",
@@ -44,7 +34,8 @@ function formatLocalDate(props) {
     "Saturday",
   ];
   let localDay = days[localTime.getDay()];
-  return `${localDay} ${formatLocalTime(props)} `;
+
+  return `${localDay} ${localHours}:${localMinutes}`;
 }
 
 //display forecast
@@ -153,7 +144,7 @@ function displayWeather(response) {
   slash.innerHTML = `/`;
   let currentDate = document.querySelector("#date");
   noteDate.innerHTML = "Latest data update in local timezone:";
-  currentDate.innerHTML = formatLocalDate(response.data);
+  currentDate.innerHTML = formatLocalTime(response.data);
   weatherNote.innerHTML = response.data.weather[0].description;
   let windSpeed = Math.round(response.data.wind.speed);
   let humidity = Math.round(response.data.main.humidity);
