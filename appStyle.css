@@ -4,7 +4,7 @@
   display: block;
   margin: 40px auto;
   margin-bottom: 16px;
-  border: 3px solid #ee858f;
+  border: 3px solid #ea64ae;
   max-width: 480px;
   border-radius: 10px;
   box-shadow: 7px 7px 30px rgb(0, 0, 0, 0.12);
@@ -134,7 +134,7 @@ h1 {
 .icon {
   display: block;
   margin: 0 auto;
-  margin-top: 17px;
+  margin-top: 16px;
 }
 
 a {
@@ -203,8 +203,9 @@ a:hover {
 }
 
 .forecast {
+  text-align: center;
   padding: 20px 48px;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 h2 {
@@ -213,14 +214,12 @@ h2 {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 5px;
-  text-align: center;
 }
 h3 {
-  font-size: 14px;
+  font-size: 13px;
   color: #636466;
   font-weight: normal;
-  margin-bottom: 3px;
-  text-align: center;
+  margin-bottom: 6px;
 }
 
 .maxTempForecast {
@@ -231,7 +230,6 @@ img.forecastIcon {
   display: block;
   margin: 0 auto;
   position: relative;
-  top: 4px;
   left: -1px;
 }
 
