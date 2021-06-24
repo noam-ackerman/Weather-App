@@ -61,7 +61,7 @@ function displayForecast(response) {
               forecastDay.dt
             )}</div></h2>
             <h3>
-              <span class="maxTempForecast" id="max-temp-forecast">${tempMax}</span><span>°</span>
+              <strong><span class="maxTempForecast" id="max-temp-forecast">${tempMax}</span><span>°</span></strong>
               <br/>
               <span class="minTempForecast" id="min-temp-forecast">${tempMin}</span><span>°</span>
             </h3>
