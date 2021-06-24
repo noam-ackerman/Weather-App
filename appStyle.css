@@ -132,11 +132,9 @@ h1 {
 }
 
 .icon {
-  filter: hue-rotate(-16deg) brightness(138%);
   display: block;
   margin: 0 auto;
-  position: relative;
-  top: -3px;
+  margin-top: 17px;
 }
 
 a {
@@ -169,14 +167,13 @@ a:hover {
 
 .weatherSection {
   position: relative;
-  top: -34px;
+  top: -7px;
 }
 
 .degreesSection {
   text-align: center;
   position: relative;
   left: -5px;
-  top: 4px;
 }
 
 .degreesC,
@@ -206,13 +203,12 @@ a:hover {
 }
 
 .forecast {
-  text-align: center;
   padding: 20px 48px;
-  margin-bottom: 15px;
+  margin: 25px 0;
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 16px;
   color: #e81224;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
@@ -220,7 +216,7 @@ h2 {
   text-align: center;
 }
 h3 {
-  font-size: 13px;
+  font-size: 14px;
   color: #636466;
   font-weight: normal;
   margin-bottom: 3px;
@@ -234,9 +230,9 @@ h3 {
 img.forecastIcon {
   display: block;
   margin: 0 auto;
-  filter: hue-rotate(-16deg) brightness(138%);
   position: relative;
-  top: -4px;
+  top: 4px;
+  left: -1px;
 }
 
 p {

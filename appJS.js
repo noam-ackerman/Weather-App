@@ -70,14 +70,13 @@ function displayForecast(response) {
               forecastDay.dt
             )}</div></h2>
             <h3>
-              <span class="maxTempForecast" id="max-temp-forecast">${tempMax}</span><span>°</span><br/>
+              <span class="maxTempForecast" id="max-temp-forecast">${tempMax}</span><span>°</span>
+              <br/>
               <span class="minTempForecast" id="min-temp-forecast">${tempMin}</span><span>°</span>
             </h3>
-            <img src="http://openweathermap.org/img/wn/${
-              forecastDay.weather[0].icon
-            }@2x.png" alt="${
+            <img src="icons/${forecastDay.weather[0].icon}.png" alt="${
           forecastDay.weather[0].description
-        }" class="forecastIcon" id="forecast-icon" width="35px"/>
+        }" class="forecastIcon" id="forecast-icon" width="28px"/>
           </div>`;
     }
   });
@@ -144,10 +143,7 @@ function getCoords(coordinates) {
 
 function displayWeather(response) {
   cityTitle.innerHTML = response.data.name.toUpperCase();
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
   let temp = Math.round(response.data.main.temp);
   degreesC.innerHTML = temp;
