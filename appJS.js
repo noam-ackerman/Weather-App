@@ -1,3 +1,15 @@
+//general selectors
+let noteDate = document.querySelector("#note-date");
+let iconElement = document.querySelector("#icon");
+let slash = document.querySelector("#slash");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+let celsiusLink = document.querySelector("#celsius-link");
+let extraDetails = document.querySelector("#extra-details");
+let cityTitle = document.querySelector("#city-title");
+let weatherNote = document.querySelector("#note");
+let degreesC = document.querySelector("#degrees-c");
+let degreesF = document.querySelector("#degrees-f");
+
 //current Hour + day in user's location defult display
 let now = new Date();
 let hours = ("0" + now.getHours()).slice(-2);
@@ -190,15 +202,3 @@ function submit(event) {
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", submit);
-
-//general selectors
-let noteDate = document.querySelector("#note-date");
-let iconElement = document.querySelector("#icon");
-let slash = document.querySelector("#slash");
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-let celsiusLink = document.querySelector("#celsius-link");
-let extraDetails = document.querySelector("#extra-details");
-let cityTitle = document.querySelector("#city-title");
-let weatherNote = document.querySelector("#note");
-let degreesC = document.querySelector("#degrees-c");
-let degreesF = document.querySelector("#degrees-f");
