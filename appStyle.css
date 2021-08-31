@@ -12,26 +12,19 @@
 
 .row.topRow {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0px 50px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0px 40px;
+  margin-top: 50px;
   font-family: "Montserrat", sans-serif;
   max-width: 100%;
-  margin: 0;
 }
 
-.typeSubmit {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-.row.searchBar {
-  margin: 0 auto;
+form {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
-  padding: 0;
 }
 
 .city {
@@ -39,10 +32,12 @@
   background: #ea64ae;
   border: 3px solid rebeccapurple;
   border-radius: 5px;
-  padding: 7px 3.5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
   font-weight: 500;
-  margin: 0;
+  width: 240px;
+  flex: 1;
   max-width: 100%;
 }
 
@@ -61,30 +56,22 @@
   box-shadow: 5px 5px 10px rgba(36, 16, 16, 0.2);
   transition: all 200ms ease-in-out;
   font-weight: 500;
-  margin: 0;
-  position: relative;
-  right: 4.2px;
+  display: block;
+  margin: 0 auto;
 }
+
 .searchButton:hover {
   background: #f274b9;
 }
 
-.location {
-  margin: 0;
-  padding: 0;
-  text-align: right;
-}
-
 .currentButton {
-  margin: 0;
   background: #ee858f;
   border: 3px solid rebeccapurple;
   border-radius: 5px;
-  padding: 7px 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 7px 12px;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
-  margin-top: 50px;
-  position: relative;
-  right: 8px;
   transition: all 200ms ease-in-out;
 }
 .currentButton:hover {
@@ -243,4 +230,41 @@ p {
 
 .codeLink:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .searchButton {
+    padding: 7px 4px;
+    font-size: 13px;
+  }
+  .city {
+    font-size: 13px;
+  }
+  .currentButton img {
+    width: 10px;
+  }
+  .currentButton {
+    padding: 4.5px 7px;
+  }
+  .row.topRow {
+    padding: 0px 20px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+  .growingHeart {
+    width: 40px;
+  }
+  .icon {
+    width: 70px;
+  }
+  .forecast {
+    padding: 30px 15px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  img.forecastIcon {
+    width: 20px;
+  }
 }
