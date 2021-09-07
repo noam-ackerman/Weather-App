@@ -202,6 +202,7 @@ h2 {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 5px;
 }
+
 h3 {
   font-size: 13px;
   color: #636466;
@@ -232,7 +233,44 @@ p {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 380px) {
+  .searchButton {
+    padding: 7px 3px;
+    font-size: 12px;
+  }
+  .city {
+    font-size: 12px;
+  }
+  .currentButton img {
+    width: 9px;
+  }
+  .currentButton {
+    padding: 3.9px 7px;
+  }
+  .row.topRow {
+    padding: 0px 10px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .growingHeart {
+    width: 35px;
+  }
+  .icon {
+    width: 70px;
+  }
+  .forecast {
+    padding: 30px 15px;
+  }
+  h2 {
+    font-size: 13px;
+  }
+  img.forecastIcon {
+    width: 20px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 450px) {
   .searchButton {
     padding: 7px 4px;
     font-size: 13px;
@@ -250,7 +288,7 @@ p {
     padding: 0px 20px;
   }
   h1 {
-    font-size: 27px;
+    font-size: 30px;
   }
   .growingHeart {
     width: 40px;
@@ -259,7 +297,7 @@ p {
     width: 70px;
   }
   .forecast {
-    padding: 30px 22px;
+    padding: 30px 24px;
   }
   h2 {
     font-size: 14px;
